@@ -11,8 +11,15 @@ resources:
             base_parameters:
                 catalog: ${var.catalog}
                 database: ${var.database}
-          libraries:
-            - pypi: 
-                package: pytest
           max_retries: 0
+          environment_key: Default
+
+      environments:
+        - environment_key: Default
+          spec:
+            client: "2"
+            dependencies:
+            - pytest==8.3.4
+
+
 
