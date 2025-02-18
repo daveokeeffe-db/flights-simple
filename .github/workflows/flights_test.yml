@@ -1,26 +1,12 @@
 name: Deploy flights_project to TEST
 
-concurrency: 1
+concurrency: "1"
 
 on:
-  workflow_dispatch:
-
-  pull_request:
-    types:
-      - opened
-      - synchronize
+  push:
     branches:
-      - dev
-    paths:
-      - "**/*.yml"
-      - "**/*.py"
-
-  #push:
-  #  branches:
-  #    - fix/yyyymmdd
-  #  paths:
-  #    - "**/*.yml"
-  #    - "**/*.py"
+      - '**'
+  workflow_dispatch:
 
 jobs:
   deploy:
