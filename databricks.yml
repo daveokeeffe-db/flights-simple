@@ -17,15 +17,13 @@ include:
 
 variables:
   catalog:
-    default: "main"
+    default: "daveok"
   database:
     default: "flights_dev"
   flights_test_schema:
     default: "flights_validation_dev"
   flights_dlt_schema:
     default: "flights_dev"
-  spark_version:
-    default: "15.3.x-scala2.12"
 
 
 targets:

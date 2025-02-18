@@ -17,7 +17,7 @@ include:
 
 variables:
   catalog:
-    default: "main"
+    default: "zivile_demo_australiaeast"
   database:
     default: "flights_dev"
   flights_test_schema:
