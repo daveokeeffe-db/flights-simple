@@ -24,8 +24,7 @@ variables:
     default: "flights_test"
   flights_dlt_schema:
     default: "flights_dev"
-  node_type_id:
-    default: "Standard_DS4_v2"
+
 
 targets:
   # The 'dev' target, used for development purposes.
@@ -37,7 +36,7 @@ targets:
     mode: development
     default: true
     workspace:
-      host: https://adb-984752964297111.11.azuredatabricks.net/
+      host: https://adb-45968885253808.8.azuredatabricks.net/ 
 
   test:
     # For test/staging deployments, we only have a single copy, so we override the
@@ -46,7 +45,7 @@ targets:
     # to a path that is not specific to the current user.
     mode: production
     workspace:
-      host: https://adb-984752964297111.11.azuredatabricks.net/
+      host: https://adb-45968885253808.8.azuredatabricks.net/
       root_path: /Shared/.bundle/${bundle.target}/${bundle.name}
     run_as:
       user_name: ${workspace.current_user.userName}
@@ -57,7 +56,7 @@ targets:
   staging:
     mode: production
     workspace:
-      host: https://adb-984752964297111.11.azuredatabricks.net/
+      host: https://adb-45968885253808.8.azuredatabricks.net/
       root_path: /Shared/.bundle/${bundle.target}/${bundle.name}
     run_as:
       user_name: ${workspace.current_user.userName}
@@ -69,7 +68,7 @@ targets:
   prod:
     mode: production
     workspace:
-      host: https://adb-984752964297111.11.azuredatabricks.net/
+      host: https://adb-45968885253808.8.azuredatabricks.net/
       root_path: /Shared/.bundle/${bundle.target}/${bundle.name}
     run_as:
       # This can run as a specific user or service principal in production.
