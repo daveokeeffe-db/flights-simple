@@ -5,7 +5,6 @@ resources:
 
       tasks:
         - task_key: setup_task
-          job_cluster_key: job_cluster
           notebook_task:
             notebook_path: ../tests/integration/setup_notebook.py
             base_parameters:
@@ -26,7 +25,6 @@ resources:
         - task_key: validation_task
           depends_on:
             - task_key: notebook_job
-          job_cluster_key: job_cluster
           notebook_task:
             notebook_path: ../tests/integration/validation_notebook.py
             base_parameters:

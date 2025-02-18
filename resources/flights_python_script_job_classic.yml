@@ -6,7 +6,6 @@ resources:
 
       tasks:
         - task_key: python_script
-          job_cluster_key: job_cluster
           spark_python_task:
             python_file: ../_adhoc/explore_data.py
             parameters: ["--catalog", "${var.catalog}", "--database", "${var.database}"]
